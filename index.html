@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Advanced Calculator</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="calculator">
+
+    <div class="display">
+      <div id="expr" class="screen">0</div>
+      <div class="sub">Result: <span id="resVal">0</span></div>
+    </div>
+
+    <div class="controls">
+      <button class="ctrl" id="degRad">DEG</button>
+      <button class="ctrl" id="memStatus">M: 0</button>
+      <button class="ctrl" id="ansBtn">ANS</button>
+      <button class="ctrl" id="mc">MC</button>
+      <button class="ctrl" id="mr">MR</button>
+      <button class="ctrl" id="mplus">M+</button>
+    </div>
+
+    <div class="keys" id="keys">
+      <button class="key" data-val="sin(">sin</button>
+      <button class="key" data-val="cos(">cos</button>
+      <button class="key" data-val="tan(">tan</button>
+      <button class="key" data-val="log10(">log</button>
+      <button class="key" data-val="ln(">ln</button>
+      <button class="key op" data-val="^">^</button>
+
+      <button class="key" data-val="sqrt(">√</button>
+      <button class="key" data-val="(">(</button>
+      <button class="key" data-val=")">)</button>
+      <button class="key" data-val="%">%</button>
+      <button class="key" data-val="pi">π</button>
+      <button class="key" data-val="e">e</button>
+
+      <button class="key" data-val="7">7</button>
+      <button class="key" data-val="8">8</button>
+      <button class="key" data-val="9">9</button>
+      <button class="key op" data-val="/">÷</button>
+      <button class="key" data-val="ans">ANS</button>
+      <button class="key" id="back">⌫</button>
+
+      <button class="key" data-val="4">4</button>
+      <button class="key" data-val="5">5</button>
+      <button class="key" data-val="6">6</button>
+      <button class="key op" data-val="*">×</button>
+      <button class="key" data-val="^2">x²</button>
+      <button class="key" data-val="^3">x³</button>
+
+      <button class="key" data-val="1">1</button>
+      <button class="key" data-val="2">2</button>
+      <button class="key" data-val="3">3</button>
+      <button class="key op" data-val="-">−</button>
+      <button class="key" data-val="1/">1/x</button>
+      <button class="key" data-val="abs(">abs</button>
+
+      <button class="key wide" data-val="0">0</button>
+      <button class="key" data-val=".">.</button>
+      <button class="key op" data-val="+">+</button>
+      <button class="key op" id="equals">=</button>
+    </div>
+
+    <div class="history-panel">
+      <div class="history-header">
+        <b>History</b>
+        <div class="history-actions">
+          <button class="ctrl" id="copyHistory">Copy</button>
+          <button class="ctrl" id="clearHistory">Clear</button>
+        </div>
+      </div>
+      <div id="historyList"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
